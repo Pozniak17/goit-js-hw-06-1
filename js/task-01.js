@@ -1,17 +1,16 @@
-const numberOfCategories = document.querySelectorAll(
-  "#categories .item > h2"
-).length;
+// ========================== Number of categories ===============================
+const numberOfCategories = document.querySelectorAll("h2").length;
 console.log("Number of categories:", numberOfCategories); //numberOfCategories: 3
 
-// ===========================================================================
+// ==================================== Animals ==================================
 
-const animalsTitle = document.querySelectorAll("h2")[0].textContent;
+const animalsTitle = document.querySelector("h2").textContent;
 console.log("Category:", animalsTitle); //Category: Animals
 
 const numbersOfAnimals = document.querySelector(".item > ul");
 console.log("Elements:", numbersOfAnimals.children.length); //Elements: 4;
 
-// ==========================================================================
+// ==================================== Products ==================================
 
 const productsTitle = document.querySelectorAll(".item > h2")[1].textContent;
 console.log("Category:", productsTitle); //Category: Products
@@ -19,11 +18,11 @@ console.log("Category:", productsTitle); //Category: Products
 const numbersOfProducts = document.querySelectorAll(".item > ul")[1];
 console.log("Elements:", numbersOfProducts.children.length);
 
-// ==========================================================================
+// ==================================== Technologies ===============================
 
 const technologiesTitle =
   document.querySelectorAll(".item > h2")[2].textContent;
-console.log("Category:", technologiesTitle);
+console.log("Category:", technologiesTitle); //Category: Products;
 
 const numberOfTechnologies = document.querySelectorAll(".item > ul")[2];
 console.log("Elements: ", numberOfTechnologies.children.length);
