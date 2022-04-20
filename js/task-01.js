@@ -25,7 +25,7 @@ const technologiesTitle =
 console.log("Category:", technologiesTitle); //Category: Products;
 
 const numberOfTechnologies = document.querySelectorAll(".item > ul")[2];
-console.log("Elements: ", numberOfTechnologies.children.length);
+console.log("Elements: ", numberOfTechnologies.children.length); //5
 
 //*✅ Number of categories: 3
 
