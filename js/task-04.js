@@ -16,11 +16,11 @@ const numberEl = document.querySelector("#value");
 let counterValue = 0;
 
 //* кнопка -1
-const listDecr = btnDecrement.addEventListener("click", function () {
+const listDecr = btnDecrement.addEventListener("click", () => {
   numberEl.textContent = counterValue -= 1;
 });
 
 //* кнопка +1
-const listIncr = btnIncrement.addEventListener("click", function () {
+const listIncr = btnIncrement.addEventListener("click", () => {
   numberEl.textContent = counterValue += 1;
 });
