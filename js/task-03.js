@@ -22,6 +22,8 @@ const result = images
   .join("");
 
 console.log(result);
+
+//* Інлайн стилі
 listEl.style.display = "flex";
 listEl.style.justifyContent = "space-around";
 
