@@ -1,14 +1,31 @@
-const refs = {
-  input: document.querySelector("#validation-input"),
-};
+const input = document.querySelector("#validation-input");
 
-console.log(refs.input);
+input.addEventListener("blur", onInputBlur);
 
-refs.input.addEventListener("blur", () => {
-  if (refs.input.value.length < refs.input.dataset.length) {
-    refs.input.classList.add("invalid");
+function onInputBlur(event) {
+  input.classList.add("#validation-input");
+  if (
+    Number(event.currentTarget.value.length) === Number(input.dataset.length)
+  ) {
+    input.classList.remove("invalid");
+    input.classList.add("valid");
   } else {
-    refs.input.classList.remove("invalid");
-    refs.input.classList.add("valid");
+    input.classList.remove("valid");
+    input.classList.add("invalid");
   }
-});
+}
+
+// const refs = {
+//   input: document.querySelector("#validation-input"),
+// };
+
+// console.log(refs.input);
+
+// refs.input.addEventListener("blur", () => {
+//   if (refs.input.value.length === refs.input.dataset.length) {
+//     refs.input.classList.add("invalid");
+//   } else {
+//     refs.input.classList.remove("invalid");
+//     refs.input.classList.add("valid");
+//   }
+// });
