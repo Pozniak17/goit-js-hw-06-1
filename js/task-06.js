@@ -1,31 +1,19 @@
-const input = document.querySelector("#validation-input");
+// доступ до інпуту
+const inputRef = document.querySelector("#validation-input");
+// доступ до data атрибуту
+const validLengthSymbolsRef = document.querySelector('input[data-length="6"]');
 
-input.addEventListener("blur", onInputBlur);
+inputRef.addEventListener("blur", onBlurValidation);
 
-function onInputBlur(event) {
-  input.classList.add("#validation-input");
-  if (
-    Number(event.currentTarget.value.length) === Number(input.dataset.length)
-  ) {
-    input.classList.remove("invalid");
-    input.classList.add("valid");
+function onBlurValidation(event) {
+  //* число введених символів користувачем
+  const userNumbersOfSymbols = event.currentTarget.value.length;
+
+  if (userNumbersOfSymbols === Number(validLengthSymbolsRef.dataset.length)) {
+    inputRef.classList.add("valid");
+    inputRef.classList.remove("invalid");
   } else {
-    input.classList.remove("valid");
-    input.classList.add("invalid");
+    inputRef.classList.add("invalid");
+    inputRef.classList.remove("valid");
   }
 }
-
-// const refs = {
-//   input: document.querySelector("#validation-input"),
-// };
-
-// console.log(refs.input);
-
-// refs.input.addEventListener("blur", () => {
-//   if (refs.input.value.length === refs.input.dataset.length) {
-//     refs.input.classList.add("invalid");
-//   } else {
-//     refs.input.classList.remove("invalid");
-//     refs.input.classList.add("valid");
-//   }
-// });
